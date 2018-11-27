@@ -1,0 +1,37 @@
+/*
+color scheme :
+dark blue: #33658a
+light blue: #86bbd8   (background color)
+green: #758e4f
+yellow: #f6ae2d
+orange: #f26419
+*/
+
+h1 {
+  color: #FFFFFF;
+  display: inline;
+  padding: 0.5em;
+
+}
+
+.main-header {
+  background-color: #33658a;
+}
+
+.buttons {
+  display: inline;
+  float: right;
+  padding: 0.5em;
+}
+
+.current-conditions {
+
+}
+
+.five-day-forecast {
+
+}
+
+.todays-forecast {
+
+}
