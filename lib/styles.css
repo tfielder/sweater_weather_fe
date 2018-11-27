@@ -1,3 +1,24 @@
+/*
+color scheme :
+dark blue: #33658a
+light blue: #86bbd8   (background color)
+green: #758e4f
+yellow: #f6ae2d
+orange: #f26419
+*/
 
+h1 {
+  color: #FFFFFF;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.current-conditions {
+
+}
+
+.five-day-forecast {
+
+}
+
+.todays-forecast {
+
+}
