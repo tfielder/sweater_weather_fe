@@ -20,6 +20,8 @@ input {
 
 form {
   color: #FFFFFF;
+  padding: 2em;
+  text-align: center;
 }
 
 .main-header {
@@ -62,11 +64,6 @@ form {
 
 .signup-modal {
   background-color: #758e4f;
-}
-
-.form {
-  padding: 2em;
-  text-align: center;
 }
 
 
