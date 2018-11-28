@@ -14,6 +14,10 @@ h1 {
 
 }
 
+input {
+  margin: 0.5em;
+}
+
 .main-header {
   background-color: #33658a;
 }
@@ -34,4 +38,18 @@ h1 {
 
 .todays-forecast {
 
+}
+
+.login-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: #f26419;
+  width: 90%;
+  height: 90%;
+}
+
+.login-form {
+  padding: 2em;
+  text-align: center;
 }
