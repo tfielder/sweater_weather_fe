@@ -14,11 +14,6 @@ h1 {
 
 }
 
-h2 {
-  text-align: center;
-  color: #FFFFFF;
-}
-
 input {
   margin: 0.5em;
 }
@@ -49,32 +44,29 @@ form {
 
 }
 
-.login-modal {
+.login-modal, .signup-modal {
   display: none;
   position: absolute;
   z-index: 1;
-  background-color: #f26419;
   height: 100%;
   width: 90%;
   margin: 2em;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #33658a;
 }
 
-.login-form {
-  padding: 2em;
-  text-align: center;
+.login-modal {
+  background-color: #f26419;
 }
 
 .signup-modal {
-  display: none;
-  position: absolute;
-  z-index: 1;
   background-color: #758e4f;
-  height: 100%;
-  width: 90%;
-  margin: 2em;
 }
 
-.signup-form {
+.form {
   padding: 2em;
   text-align: center;
 }
+
+
