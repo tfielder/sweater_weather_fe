@@ -42,11 +42,12 @@ input {
 
 .login-modal {
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   background-color: #f26419;
+  height: 100%;
   width: 90%;
-  height: 90%;
+  margin: 2em;
 }
 
 .login-form {
