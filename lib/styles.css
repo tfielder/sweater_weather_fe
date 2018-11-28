@@ -7,13 +7,6 @@ yellow: #f6ae2d
 orange: #f26419
 */
 
-h1 {
-  color: #FFFFFF;
-  display: inline;
-  padding: 0.5em;
-
-}
-
 input {
   margin: 0.5em;
 }
@@ -28,6 +21,12 @@ form {
   background-color: #33658a;
 }
 
+.main-header h1 {
+  color: #FFFFFF;
+  display: inline;
+  padding: 0.5em;
+}
+
 .buttons {
   display: inline;
   float: right;
@@ -38,7 +37,7 @@ form {
 
 }
 
-.five-day-forecast {
+.weeks-forecast {
 
 }
 
