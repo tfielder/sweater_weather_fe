@@ -9,8 +9,8 @@
     <div class="main-header">
       <h1>Sweater Weather</h1>
       <div class="buttons">
-        <button type="button" class="link"><a href="www.google.com">Login</a></button>
-        <button type="button" class="link"><a href="www.google.com">Sign Up</a></button>
+        <button type="button" class="login-button">Login</button>
+        <button type="button" class="signup-button">Sign Up</button>
       </div>
     </div>
     <div class="current-conditions">
@@ -29,7 +29,36 @@
       </p>
     </div>
 
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="main.bundle.js"></script>
+    <div class="login-modal">
+      <h2>Log In</h2>
+      <form>
+        Email:
+        <input type="text" name="email" />
+        <br />
+        Password:
+        <input type="text" name="password" />
+        <br />
+        <input type="submit" class="submit" name="Login" />
+      </form>
+    </div>
+
+    <div class="signup-modal">
+      <h2>Sign Up</h2>
+      <form>
+        Email:
+        <input type="text" name="email" />
+        <br />
+        Password:
+        <input type="text" name="password" />
+        <br />
+        Verify Password:
+        <input type="text" name="password-verify" />
+        <br />
+        <input type="submit" class="submit" name="Signup" />
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="main.bundle.js"></script> -->
+    <script src="index.js"></script>
 </body>
 </html>
