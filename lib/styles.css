@@ -14,8 +14,17 @@ h1 {
 
 }
 
+h2 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
 input {
   margin: 0.5em;
+}
+
+form {
+  color: #FFFFFF;
 }
 
 .main-header {
@@ -51,6 +60,21 @@ input {
 }
 
 .login-form {
+  padding: 2em;
+  text-align: center;
+}
+
+.signup-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #758e4f;
+  height: 100%;
+  width: 90%;
+  margin: 2em;
+}
+
+.signup-form {
   padding: 2em;
   text-align: center;
 }

@@ -9,9 +9,12 @@ $(document).ready(function () {
     $(this).css("cursor", "pointer");
   });
 
-  $(".js-login-button").click(function () {
+  $(".login-button").click(function () {
     $(".login-modal").show();
+  });
 
+  $(".signup-button").click(function () {
+    $(".signup-modal").show();
   });
 
 });
