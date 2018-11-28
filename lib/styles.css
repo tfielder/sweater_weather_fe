@@ -17,6 +17,7 @@ form {
   text-align: center;
 }
 
+/* header section */
 .main-header {
   background-color: #33658a;
 }
@@ -28,22 +29,65 @@ form {
 }
 
 .buttons {
-  display: inline;
   float: right;
   padding: 0.5em;
 }
 
-.current-conditions {
+/* current conditions block */
+.current-conditions div {
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.current-con p {
+  display: inline-block;
+}
+
+.current-con h3 {
+  display: inline-block;
+}
+
+.current-con {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+.city {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+.connections {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+/* todays forecast block */
+
+.todays-forecast div {
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.icon-section {
+  vertical-align: top;
+}
+
+.icon-section p {
+  display: inline-block;
+}
+
+.icon-section h3 {
+  display: inline-block;
+}
+
+/* weekly forecast block */
+
+.weeks-forecast div {
 
 }
 
-.weeks-forecast {
-
-}
-
-.todays-forecast {
-
-}
+/* modal blocks */
 
 .login-modal, .signup-modal {
   display: none;
