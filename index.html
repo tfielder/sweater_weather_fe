@@ -30,9 +30,9 @@
         <h3>Time</h3>
         <h3>Date</h3>
       </div>
-      <div class="connections">
-        <p><a>Change Location</a></p>
-        <p><a>favorite</a></p>
+      <div class="connection">
+        <button type="button" class="location-button">Change Location</button>
+        <button type="button">favorite</button>
       </div>
     </div>
     <div class="todays-forecast">
@@ -83,10 +83,10 @@
     <div class="login-modal">
       <h2>Log In</h2>
       <form>
-        Email:
+        <h3>Email:</h3>
         <input type="text" name="email" />
         <br />
-        Password:
+        <h3>Password:</h3>
         <input type="text" name="password" />
         <br />
         <input type="submit" class="submit" name="Login" />
@@ -96,18 +96,29 @@
     <div class="signup-modal">
       <h2>Sign Up</h2>
       <form>
-        Email:
+        <h3>Email:</h3>
         <input type="text" name="email" />
         <br />
-        Password:
+        <h3>Password:</h3>
         <input type="text" name="password" />
         <br />
-        Verify Password:
+        <h3>Verify Password:</h3>
         <input type="text" name="password-verify" />
         <br />
         <input type="submit" class="submit" name="Signup" />
       </form>
     </div>
+
+    <div class="location-modal">
+      <h2>Location</h2>
+      <form>
+        <h3>Location:</h3>
+        <input type="text" name="location" />
+        <br />
+        <input type="submit" class="submit" name="Search" />
+      </form>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="main.bundle.js"></script> -->
     <script src="index.js"></script>
