@@ -16,4 +16,7 @@
     $(".signup-modal").show();
   });
 
-  
+  $(".location-button").click(function () {
+    $(".location-modal").show();
+  });
+
