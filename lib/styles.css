@@ -89,7 +89,7 @@ form {
 
 /* modal blocks */
 
-.login-modal, .signup-modal {
+.login-modal, .signup-modal, .location-modal {
   display: none;
   position: absolute;
   z-index: 1;
@@ -110,20 +110,10 @@ form {
 }
 
 .location-modal {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 90%;
-  margin: 2em;
-  color: #FFFFFF;
-  text-align: center;
-  background-color: #33658a;
-}
-
-.location-modal {
   background-color: #86bbd8;
 }
+
+
 
 
 
