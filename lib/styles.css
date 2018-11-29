@@ -7,6 +7,25 @@ yellow: #f6ae2d
 orange: #f26419
 */
 
+/*
+fonts:
+font-family: 'Oswald', sans-serif;
+font-family: 'Cormorant Upright', serif;
+font-family: 'Courgette', cursive;        Nope
+font-family: 'Kaushan Script', cursive;
+font-family: 'Cormorant', serif;          Nope
+font-family: 'Jaldi', sans-serif;
+*/
+
+body {
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Cormorant Upright', serif; */
+  /* font-family: 'Courgette', cursive; */
+  /* font-family: 'Kaushan Script', cursive; */
+  /* font-family: 'Cormorant', serif; */
+  /* font-family: 'Jaldi', sans-serif; */
+}
+
 input {
   margin: 0.5em;
 }
@@ -26,6 +45,7 @@ form {
   color: #FFFFFF;
   display: inline;
   padding: 0.5em;
+  /* font-family: 'Kaushan Script', cursive; */
 }
 
 .buttons {
