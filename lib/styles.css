@@ -7,13 +7,6 @@ yellow: #f6ae2d
 orange: #f26419
 */
 
-h1 {
-  color: #FFFFFF;
-  display: inline;
-  padding: 0.5em;
-
-}
-
 input {
   margin: 0.5em;
 }
@@ -24,27 +17,77 @@ form {
   text-align: center;
 }
 
+/* header section */
 .main-header {
   background-color: #33658a;
 }
 
-.buttons {
+.main-header h1 {
+  color: #FFFFFF;
   display: inline;
+  padding: 0.5em;
+}
+
+.buttons {
   float: right;
   padding: 0.5em;
 }
 
-.current-conditions {
+/* current conditions block */
+.current-conditions div {
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.current-con p {
+  display: inline-block;
+}
+
+.current-con h3 {
+  display: inline-block;
+}
+
+.current-con {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+.city {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+.connections {
+  vertical-align: top;
+  padding: 0.5em;
+}
+
+/* todays forecast block */
+
+.todays-forecast div {
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.icon-section {
+  vertical-align: top;
+}
+
+.icon-section p {
+  display: inline-block;
+}
+
+.icon-section h3 {
+  display: inline-block;
+}
+
+/* weekly forecast block */
+
+.weeks-forecast div {
 
 }
 
-.five-day-forecast {
-
-}
-
-.todays-forecast {
-
-}
+/* modal blocks */
 
 .login-modal, .signup-modal {
   display: none;
