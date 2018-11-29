@@ -1,7 +1,5 @@
 // This file is in the entry point in your webpack config.
-  // let pageData = {
-  //
-  // };
+  let pageInfo = {};
 
   $("button").each(function () {
     $(this).css("cursor", "pointer");
@@ -24,22 +22,23 @@
   });
 
   $(".location-search").click(function (){
-    var location = $("#location").val();
-    getWeather();
+    var locale = $("#location").val();
+    getWeather(locale);
   });
 
-  // function getWeather() {
-  //   const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + location;
-  //   fetch(url, {
-  //     mode: 'no-cors'
-  //     }).then(function(response) {
-  //       console.log(response.status)
-  //       console.log(response.json())
-  //     //  return response.json()
-  //     }).then(function(locationPicture) {
-  //       JSON.stringify(locationPicture)
-  //     });
-  // }
-  //
-  // getWeather();
+  const getWeather = (locale) => {
+    const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + locale;
+    fetch(url)
+      .then((response) => response.json())
+      .then((info) => setLocationInfo(info))
+      .catch((error) => console.error({ error }))
+  }
+
+  const setLocationInfo = (weather) => {
+    pageInfo = {
+      info: weather
+    }
+  }
+
+  console.log(getWeather());
 
