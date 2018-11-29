@@ -9,4 +9,5 @@ Tim Fielder
 ## Description:
 This is the beginning of the Front End for the Sweater Weather project.
 
-
+The link to the live project may be found here:
+https://tfielder.github.io/sweater_weather_fe/
