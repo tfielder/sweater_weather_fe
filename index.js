@@ -1,5 +1,15 @@
 // This file is in the entry point in your webpack config.
 
+  // const hideModal = (modalType) => {
+  //   $(`.${modalType}-modal`).hide();
+  // }
+  //
+  // $(document).ready(function () {
+  //   hideModal('login'));
+  //   hideModal('signup'));
+  //   hideModal('location'));
+  // });
+
   $("button").each(function () {
     $(this).css("cursor", "pointer");
   });
@@ -8,15 +18,23 @@
     $(this).css("cursor", "pointer");
   });
 
-  $(".login-button").click(function () {
-    $(".login-modal").show();
-  });
+  const showModal = (modalType) => {
+    $(`.${modalType}-modal`).show();
+    modalType.stopPropagation();
+  }
 
-  $(".signup-button").click(function () {
-    $(".signup-modal").show();
-  });
+  // $(".login-button").click(function () {
+  //   $(".login-modal").show();
+  // });
+  $(".login-button").on('click', showModal('login'));
 
-  $(".location-button").click(function () {
-    $(".location-modal").show();
-  });
+  // $(".signup-button").click(function () {
+  //   $(".signup-modal").show();
+  // });
+  $(".signup-button").on('click', showModal('signup'));
+
+  // $(".location-button").click(function () {
+  //   $(".location-modal").show();
+  // });
+  $(".location-button").on('click', showModal('location'));
 
