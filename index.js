@@ -23,10 +23,10 @@
 
   $(".location-search").click(function (){
     var locale = $("#location").val();
-    getWeather(locale);
+    getPhotos(locale);
   });
 
-  const getWeather = (locale) => {
+  const getPhotos = (locale) => {
     const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + locale;
     fetch(url)
       .then((response) => response.json())
@@ -34,11 +34,22 @@
       .catch((error) => console.error({ error }))
   }
 
-  const setLocationInfo = (weather) => {
+  const setLocationInfo = (info) => {
     pageInfo = {
-      info: weather
+      info: info,
+      photos: info["photos"]["photo"]
     }
+    setBackgroundImage();
   }
 
-  console.log(getWeather());
+  const setBackgroundImage = () => {
+    $('body').css('background-image', `url(${getRandomImage()})`);
+  }
+
+  const getRandomImage = () => {
+    var photo = pageInfo["photos"][Math.floor(Math.random() * pageInfo["photos"].length)];
+    return photo["url_o"];
+  }
+
+  console.log(getPhotos());
 
