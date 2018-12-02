@@ -61,10 +61,11 @@
     setBackgroundImage();
   }
 
-  const setWeatherInfo = (info) => {
+  const setWeatherInfo = (info, locale) => {
     localStorage.setItem('weather', JSON.stringify(info));
     var weather = JSON.parse(localStorage.getItem('weather'));
     setCurrentConditions(weather);
+    setLocationInformation(locale);
     setForecastConditions();
     setExtendedForecastConditions();
   }
@@ -73,7 +74,7 @@
     const url = "https://whether-to-weather.herokuapp.com/api/v1/forecast?location=" + locale;
     fetch(url)
     .then((response) => response.json())
-    .then((info) => setWeatherInfo(info))
+    .then((info) => setWeatherInfo(info, locale))
     .catch((error) => console.error({ error }))
   }
 
@@ -86,11 +87,23 @@
   }
 
   const setCurrentConditions = (weather) => {
-    debugger;
     $('.current-con').empty();
-    $('.current-con').append(`<p>${weather["currently"]["icon"]}</p>`)
-    $('.current-con').append(`<h3>${weather["currently"]["summary"]}</h3>`)
-    $('.current-con').append(`<h1>${weather["currently"]["temperature"]} &deg;F</h1>`)
-    $('.current-con').append(`<h3>High: ${weather["daily"]["data"][0]["temperatureHigh"]}</h3>`)
-    $('.current-con').append(`<h3>Low: ${weather["daily"]["data"][0]["temperatureLow"]}</h3>`)
+    $('.current-con').append(`<p>${weather["currently"]["icon"]}</p>`);
+    $('.current-con').append(`<h3>${weather["currently"]["summary"]}</h3>`);
+    $('.current-con').append(`<h1>${weather["currently"]["temperature"]} &deg;F</h1>`);
+    $('.current-con').append(`<h3>High: ${weather["daily"]["data"][0]["temperatureHigh"]}</h3>`);
+    $('.current-con').append(`<h3>Low: ${weather["daily"]["data"][0]["temperatureLow"]}</h3>`);
+  }
+
+  const setLocationInformation = (locale) => {
+    $('.city').empty();
+    $('.city').append(``);
+    $('.city').append(`<h1>${}City</h1>`)
+    $('.city').append(`<h2>${}Country</h2>`)
+    $('.city').append(`<h3>${}Time</h3>`)
+    $('.city').append(`<h3>${}Date</h3>`)
+  }
+
+  const setForecastConditions = (weather) => {
+    
   }
