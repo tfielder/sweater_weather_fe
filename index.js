@@ -32,31 +32,40 @@
     $(".location-modal").hide();
   });
 
-  //
-
 
   const getRandomImage = () => {
-    var photo = pageInfo["photos"][Math.floor(Math.random() * pageInfo["photos"].length)];
-    return photo["url_o"];
+    var photos_object = JSON.parse(localStorage.getItem('photos'));
+    var photos = photos_object["photos"]["photo"]
+    var photo = choosePhoto(photos);
+    return photo;
+  }
+
+  const choosePhoto = (photos) => {
+    var photo = randomizePhoto(photos);
+    while (typeof photo === "undefined") {
+      photo = randomizePhoto(photos);
+    }
+    return photo;
+  }
+
+  const randomizePhoto = (photos) => {
+    return photos[Math.floor(Math.random() * photos.length)]["url_o"];
   }
 
   const setBackgroundImage = () => {
     $('body').css('background-image', `url(${getRandomImage()})`);
   }
 
-  const setLocationInfo = (info) => {
-    pageInfo = {
-      info: info,
-      photos: info["photos"]["photo"]
-    }
+  const setPhotoInfo = (info) => {
+    localStorage.setItem('photos', JSON.stringify(info));
     setBackgroundImage();
   }
 
   const setWeatherInfo = (info) => {
-      localStorage.setItem('weather', info);
-      // pageInfo = {
-      //   weather: info
-      // }
+    localStorage.setItem('weather', JSON.stringify(info));
+    setCurrentConditions();
+    setForecastConditions();
+    setExtendedForecastConditions();
   }
 
   const getWeather = (locale) => {
@@ -71,6 +80,13 @@
     const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + locale;
     fetch(url)
       .then((response) => response.json())
-      .then((info) => setLocationInfo(info))
+      .then((info) => setPhotoInfo(info))
       .catch((error) => console.error({ error }))
+  }
+
+  const setCurrentConditions = () => {
+    debugger;
+    $('.current-con').empty();
+    $('.current-con').append(`<p>Colorado!<p>`);
+
   }

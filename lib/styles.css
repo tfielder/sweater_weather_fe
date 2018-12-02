@@ -24,9 +24,10 @@ body {
   /* font-family: 'Kaushan Script', cursive; */
   /* font-family: 'Cormorant', serif; */
   /* font-family: 'Jaldi', sans-serif; */
-
+  background-image: url('https://c1.staticflickr.com/5/4703/39263977214_a1284cf053_b.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+  color: #FFFFFF;
 }
 
 input {
@@ -60,6 +61,8 @@ form {
 .current-conditions div {
   margin: 0.5em;
   display: inline-block;
+  background-color: rgba(1, 1, 1, 0.6);
+  /* background-color: #505050; */
 }
 
 .current-con p {
@@ -90,6 +93,7 @@ form {
 .todays-forecast div {
   margin: 0.5em;
   display: inline-block;
+  background-color: rgba(1, 1, 1, 0.6);
 }
 
 .icon-section {
@@ -107,7 +111,7 @@ form {
 /* weekly forecast block */
 
 .weeks-forecast div {
-
+  background-color: rgba(1, 1, 1, 0.6);
 }
 
 /* modal blocks */
@@ -126,15 +130,18 @@ form {
 }
 
 .login-modal {
-  background-color: #f26419;
+  /* background-color: #f26419; */
+  background-color: rgba(242, 100, 25, 0.9);
 }
 
 .signup-modal {
-  background-color: #758e4f;
+  /* background-color: #758e4f; */
+  background-color: rgba(117, 142, 79, 0.9);
 }
 
 .location-modal {
-  background-color: #86bbd8;
+  /* background-color: #86bbd8; */
+  background-color: rgba(134, 187, 216, 0.9);
 }
 
 
