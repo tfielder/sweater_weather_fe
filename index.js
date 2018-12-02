@@ -1,7 +1,4 @@
 // This file is in the entry point in your webpack config.
-  $(document).ready(function () {
-    alert("ready");
-  })
 
   let pageInfo = {};
 
