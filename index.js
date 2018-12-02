@@ -1,6 +1,11 @@
 // This file is in the entry point in your webpack config.
+  $(document).ready(function () {
+    alert("ready");
+  })
+
   let pageInfo = {};
 
+  // button formatting
   $("button").each(function () {
     $(this).css("cursor", "pointer");
   });
@@ -9,6 +14,7 @@
     $(this).css("cursor", "pointer");
   });
 
+  //modal display
   $(".login-button").click(function () {
     $(".login-modal").show();
   });
@@ -21,17 +27,20 @@
     $(".location-modal").show();
   });
 
+  //information gathering based on location
   $(".location-search").click(function (){
     var locale = $("#location").val();
+    getWeather(locale);
     getPhotos(locale);
   });
 
-  const getPhotos = (locale) => {
-    const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + locale;
-    fetch(url)
-      .then((response) => response.json())
-      .then((info) => setLocationInfo(info))
-      .catch((error) => console.error({ error }))
+  const getRandomImage = () => {
+    var photo = pageInfo["photos"][Math.floor(Math.random() * pageInfo["photos"].length)];
+    return photo["url_o"];
+  }
+
+  const setBackgroundImage = () => {
+    $('body').css('background-image', `url(${getRandomImage()})`);
   }
 
   const setLocationInfo = (info) => {
@@ -42,14 +51,28 @@
     setBackgroundImage();
   }
 
-  const setBackgroundImage = () => {
-    $('body').css('background-image', `url(${getRandomImage()})`);
+  const setWeatherInfo = (info) => {
+
+      debugger;
+      pageInfo = {
+        weather: info
+      }
+      // $('')
+      console.log(info);
   }
 
-  const getRandomImage = () => {
-    var photo = pageInfo["photos"][Math.floor(Math.random() * pageInfo["photos"].length)];
-    return photo["url_o"];
+  const getWeather = (locale) => {
+    const url = "https://whether-to-weather.herokuapp.com/api/v1/forecast?location=" + locale;
+    fetch(url)
+    .then((response) => response.json())
+    .then((info) => setWeatherInfo(info))
+    .catch((error) => console.error({ error }))
   }
 
-  console.log(getPhotos());
-
+  const getPhotos = (locale) => {
+    const url = "https://whether-to-weather.herokuapp.com/api/v1/backgrounds?location=" + locale;
+    fetch(url)
+      .then((response) => response.json())
+      .then((info) => setLocationInfo(info))
+      .catch((error) => console.error({ error }))
+  }
