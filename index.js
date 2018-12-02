@@ -32,7 +32,11 @@
     var locale = $("#location").val();
     getWeather(locale);
     getPhotos(locale);
+    $(".location-modal").hide();
   });
+
+  //
+
 
   const getRandomImage = () => {
     var photo = pageInfo["photos"][Math.floor(Math.random() * pageInfo["photos"].length)];
@@ -52,13 +56,10 @@
   }
 
   const setWeatherInfo = (info) => {
-
-      debugger;
-      pageInfo = {
-        weather: info
-      }
-      // $('')
-      console.log(info);
+      localStorage.setItem('weather', info);
+      // pageInfo = {
+      //   weather: info
+      // }
   }
 
   const getWeather = (locale) => {
