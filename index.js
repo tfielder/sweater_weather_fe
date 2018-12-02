@@ -63,7 +63,8 @@
 
   const setWeatherInfo = (info) => {
     localStorage.setItem('weather', JSON.stringify(info));
-    setCurrentConditions();
+    var weather = JSON.parse(localStorage.getItem('weather'));
+    setCurrentConditions(weather);
     setForecastConditions();
     setExtendedForecastConditions();
   }
@@ -84,9 +85,12 @@
       .catch((error) => console.error({ error }))
   }
 
-  const setCurrentConditions = () => {
+  const setCurrentConditions = (weather) => {
     debugger;
     $('.current-con').empty();
-    $('.current-con').append(`<p>Colorado!<p>`);
-
+    $('.current-con').append(`<p>${weather["currently"]["icon"]}</p>`)
+    $('.current-con').append(`<h3>${weather["currently"]["summary"]}</h3>`)
+    $('.current-con').append(`<h1>${weather["currently"]["temperature"]} &deg;F</h1>`)
+    $('.current-con').append(`<h3>High: ${weather["daily"]["data"][0]["temperatureHigh"]}</h3>`)
+    $('.current-con').append(`<h3>Low: ${weather["daily"]["data"][0]["temperatureLow"]}</h3>`)
   }
