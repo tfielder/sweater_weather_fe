@@ -48,8 +48,6 @@
 
 	// This file is in the entry point in your webpack config.
 
-	var pageInfo = {};
-
 	// button formatting
 	$("button").each(function () {
 	  $(this).css("cursor", "pointer");
