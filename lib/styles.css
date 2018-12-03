@@ -114,7 +114,7 @@ form {
 
 /* weekly forecast block */
 
-.weeks-forecast div {
+.weeks-forecast {
   background-color: rgba(1, 1, 1, 0.6);
 }
 
@@ -122,6 +122,18 @@ form {
   width: 20%;
   display: inline-block;
   text-align: center;
+}
+
+.weekly-div {
+  margin: 0.5em;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.weekly-forecast {
+  dislay: inline-block;
+  margin: 0.5em;
 }
 
 /* modal blocks */
