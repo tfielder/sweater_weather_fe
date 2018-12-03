@@ -1,5 +1,7 @@
 # Sweater Weather Front End README
 
+![screen shot 2018-12-03 at 12 07 20 am](https://user-images.githubusercontent.com/38568909/49359338-31260200-f693-11e8-8a02-1a2a173d4b91.png)
+
 ## Author:
 Tim Fielder
 ## Date:
