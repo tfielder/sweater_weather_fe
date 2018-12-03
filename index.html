@@ -28,12 +28,11 @@
       <div class="city">
         <h1>City</h1>
         <h2>Country</h2>
-        <h3>Time</h3>
         <h3>Date</h3>
       </div>
       <div class="connection">
         <button type="button" class="location-button">Change Location</button>
-        <button type="button">favorite</button>
+        <!-- <button type="button">favorite</button> -->
       </div>
     </div>
     <div class="todays-forecast">
@@ -53,15 +52,14 @@
             <h3>UV index</h3>
           </div>
           <div class="additional-info-responses">
-            <h3>1</h3>
-            <h3>2</h3>
-            <h3>3</h3>
-            <h3>4</h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
           </div>
         </div>
         <div class="conditions-description">
           <h3><em>Today:</em></h3>
-          <h3><em>Tonight:</em></h3>
         </div>
       </div>
     </div>
@@ -85,12 +83,12 @@
       <h2>Log In</h2>
       <form>
         <h3>Email:</h3>
-        <input type="text" name="email" />
+        <input type="text" id="email-login" name="email" />
         <br />
         <h3>Password:</h3>
-        <input type="text" name="password" />
+        <input type="text" id="password-login" name="password" />
         <br />
-        <input type="button" class="submit" value="Login" />
+        <input type="button" class="login-submit" value="Login" />
       </form>
     </div>
 
@@ -98,15 +96,15 @@
       <h2>Sign Up</h2>
       <form>
         <h3>Email:</h3>
-        <input type="text" name="email" />
+        <input type="text" id="email-signup" name="email" />
         <br />
         <h3>Password:</h3>
-        <input type="text" name="password" />
+        <input type="text" id="password-signup" name="password" />
         <br />
         <h3>Verify Password:</h3>
-        <input type="text" name="password-verify" />
+        <input type="text" id="password-verify-signup" name="password-verify" />
         <br />
-        <input type="button" class="submit" value="Signup" />
+        <input type="button" class="sign-up-submit" value="Signup" />
       </form>
     </div>
 
@@ -123,6 +121,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="main.bundle.js"></script> -->
     <script src="lib/index.js"></script>
-    
+
 </body>
 </html>
