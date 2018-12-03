@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Sweater Weather</title>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant|Cormorant+Upright|Courgette|Jaldi|Kaushan+Script|Oswald" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="lib/styles.css" />
 </head>
 <body>
@@ -25,7 +26,7 @@
         <h3>Low</h3>
       </div>
       <div class="city">
-        <h1>Denver, CO</h1>
+        <h1>City</h1>
         <h2>Country</h2>
         <h3>Time</h3>
         <h3>Date</h3>
@@ -89,7 +90,7 @@
         <h3>Password:</h3>
         <input type="text" name="password" />
         <br />
-        <input type="submit" class="submit" name="Login" />
+        <input type="button" class="submit" value="Login" />
       </form>
     </div>
 
@@ -105,7 +106,7 @@
         <h3>Verify Password:</h3>
         <input type="text" name="password-verify" />
         <br />
-        <input type="submit" class="submit" name="Signup" />
+        <input type="button" class="submit" value="Signup" />
       </form>
     </div>
 
@@ -113,9 +114,9 @@
       <h2>Location</h2>
       <form>
         <h3>Location:</h3>
-        <input type="text" name="location" />
+        <input id="location" type="text" name="location" />
         <br />
-        <input type="submit" class="submit" name="Search" />
+        <input type="button" class="location-search" value="Search"/>
       </form>
     </div>
 
